@@ -7,6 +7,6 @@ Blogger::Application.routes.draw do
   resources :authors
   resources :author_sessions, only: [ :new, :create, :destroy ]
 
-	match 'login'  => 'author_sessions#new', via: :get
-	match 'logout' => 'author_sessions#destroy', via: :delete
+	get 'login'  => 'author_sessions#new'
+	get 'logout' => 'author_sessions#destroy'
 end
